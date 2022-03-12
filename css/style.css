@@ -1,8 +1,213 @@
 /*
- * Login:
+ * Login:xtetau00
  *
  * Doplnte sve reseni.
  *
  * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
  * a pro netrivialni useky kodu (napr. bubliny v sekci #refs)
  */
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.content
+{
+    display: block !important;
+    font-size: 14px;
+    margin: 60px 20px 80px;
+    font-family: "PT sans", serif;
+    line-height: 1.7;
+    max-width: 1200px;
+    min-width: 768px;
+}
+h3
+{
+    font-size: 24px;
+}
+
+/* HEADER START */
+header
+{
+    display: flex;
+    position: relative;
+    background-image:url("../img/header.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    width: auto;
+    min-width: inherit;
+    max-width: inherit;
+    min-height: 400px;
+    color:steelblue;
+}
+#header-menu
+{
+    min-width: inherit;
+    max-width: inherit;
+    display:grid;
+    margin-top: -50px;
+    grid-template-columns: 65% 45%;
+    column-gap: 10px;
+    color: steelblue;
+    text-decoration: none;
+}
+#contacts
+{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    gap: 10px;
+}
+#contacts i, #contacts a
+{
+    text-decoration: none;
+    color: #bfbfbf;
+    margin-right: 5px;
+}
+#phone
+{
+    color:#bfbfbf;
+}
+#phone i, #mail i
+{
+    color:steelblue;
+}
+#networks a
+{
+    text-decoration: none;
+    color: steelblue;
+}
+#networks
+{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    align-items: flex-end;
+    order: 4;
+}
+#contacts, #contacts i, #contacts a
+{
+    text-align: left;
+}
+#header-title h1
+{
+    font-size: 64px;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#logo
+{
+    display: flex;
+    align-items: flex-end;
+    padding-left: 20px;
+    font-size: 24px;
+    color: steelblue;
+    font-family: "Special Elite", serif;
+    text-decoration: none;
+}
+#logo a
+{
+    text-decoration: none;
+    color:steelblue;
+}
+
+#navigation ul, #navigation li
+{
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#navigation a
+{
+    padding: 5px 15px;
+    text-decoration: none;
+    color:#bfbfbf;
+}
+
+#navigation a:hover
+{
+    border: 1px solid steelblue;
+}
+
+#header-title
+{
+    position: absolute;
+    top:66%;
+}
+
+#get-started a
+{
+    margin-left: 20px;
+    background-color: black;
+    color: #bfbfbf;
+    border: 2px solid #bfbfbf;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+#get-started a:hover
+{
+    color: white;
+    background-color: steelblue;
+    font-weight: bold;
+}
+
+/* HEADER END */
+
+#services h2
+{
+    text-align: center;
+    font-size: 40px;
+}
+
+#services div
+{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+}
+.services-column, .services-card
+{
+    display: block !important;
+    border: 1px solid #bfbfbf;
+}
+.services-card div
+{
+    display: block !important;
+    size: 50px;
+}
+
+
+.about-item, #price
+{
+    background-color: #f7f7f7;
+}
+#map
+{
+    height: 400px;
+}
+
+/* FOOTER START */
+
+#footer
+{
+    color: #bfbfbf;
+    background-color: black;
+}
+
+#footer a
+{
+    text-decoration: none;
+    color:steelblue;
+}
+
+/* FOOTER END */

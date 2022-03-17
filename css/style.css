@@ -344,6 +344,7 @@ h3
     margin-top: 0;
     margin-bottom: 0;
     color: #898989;
+    font-size: 18px;
 }
 .team-card p
 {
@@ -420,6 +421,10 @@ h3
 /* STATS END */
 
 /* PRICE START */
+#price .content
+{
+    font-size: 18px;
+}
 #price h2
 {
     text-align: center;
@@ -447,11 +452,17 @@ h3
 
 #price table
 {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 20px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
     text-align: left;
+}
+#price td
+{
+    border-bottom: 1px dotted steelblue;
+    border-top: 1px dotted steelblue;
 }
 #price button
 {
@@ -461,17 +472,27 @@ h3
     border-radius: 5px;
     border-width: 1px;
 }
+#price button:hover
+{
+    background-color: steelblue;
+    color: white;
+}
 #price tr
 {
     border-bottom: 1px dotted #898989;
 }
+#price tr:hover
+{
+    color: steelblue;
+    background-color: white;
+}
 /* PRICE END */
 
 /* REFS START */
-.refs-card h3
+#refs
 {
+    border-bottom: 2px dashed #898989;
 }
-
 .refs-card blockquote
 {
     position: relative;
@@ -513,14 +534,45 @@ h3
 }
 .refs-card
 {
+    display: grid;
     max-width: 400px;
+    font-size: 18px;
+}
+.refs-card h3
+{
+    font-size: 18px;
+    position: relative;
+    color: #898989;
+    font-weight: normal;
+}
+.refs-card:hover blockquote
+{
+    background-color: steelblue;
+    color: white;
+}
+.refs-card:hover blockquote::after
+{
+    border-color: steelblue white white steelblue;
+}
+.refs-card:hover blockquote::before
+{
+    color: white;
+}
+.refs-card:hover h3
+{
+    color: steelblue;
+}
+.refs-card figure
+{
+    display: grid;
+    grid-template-columns: 80px 1fr;
 }
 #refs img
 {
-    float: left;
     width: 60px;
     border-radius: 50px;
 }
+
 
 /* REFS END */
 

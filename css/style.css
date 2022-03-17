@@ -17,7 +17,6 @@ body
 {
     font-size: 14px;
     font-family: "PT sans", serif;
-    width: 100vw;
     min-width: 768px;
     max-width: 1200px;
     line-height: 1.7;
@@ -38,14 +37,11 @@ h3
 #header
 {
     position: relative;
-    display: flex;
     background-image:url("../img/header.jpg");
     background-size: cover;
-    background-position: top;
+    background-position: center;
     height: 100vh;
     width: auto;
-    min-width: inherit;
-    max-width: inherit;
     min-height: 400px;
     color:steelblue;
 }
@@ -155,7 +151,7 @@ h3
 #header-title
 {
     position: absolute;
-    top: 66%;
+    bottom: 33%;
 }
 
 #get-started a
@@ -184,42 +180,102 @@ h3
 
 /* SERVICES START */
 
-#services .content
-{
-    display: block !important;
-}
 #services h2
 {
-    text-align: center;
     font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-#services div
+#services .content>p
+{
+    font-size: 18px;
+    text-align: center;
+    color: #898989;
+    margin-bottom: 40px;
+}
+
+.services-card p
+{
+    text-align: center;
+    margin: 0 10px 10px;
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+.services-card h3
+{
+    text-align: center;
+    margin-bottom: 0;
+
+}
+
+#services .content>div
 {
     display: grid;
-    gap: 10px;
-    grid-template-columns: 300px 300px;
     justify-content: center;
-}
-.services-column, .services-card
-{
-    display: block !important;
-    border: 1px solid #bfbfbf;
-}
-.services-card div
-{
-    display: block !important;
-    size: 50px;
+    grid-template-columns: 300px 300px;
+    gap: 40px;
 }
 
+.services-column
+{
+    box-shadow: 0 0 10px 0 #bfbfbf;
+    border-radius: 5px;
+}
+.services-column:hover
+{
+    box-shadow: 0 0 10px 0 steelblue;
+}
+
+.services-card
+{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.services-card img
+{
+    position: absolute;
+    top: 20px;
+    left: 125px;
+    width: 38px;
+    padding: 5px;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+}
+.services-card:hover h3
+{
+    color: steelblue;
+}
+.services-card img:last-child
+{
+    visibility: hidden;
+}
+.services-card:hover img:last-child
+{
+    visibility: visible;
+    background-color: steelblue;
+}
 /* SERVICES END */
 
 /* ABOUT START */
 
 #about .content
 {
+    font-size: 18px;
+    color: #898989;
     display: grid;
     grid-template-columns: 1fr;
+}
+
+#about h2
+{
+    margin-top: 0;
+    color: black;
+    font-size: 32px;
 }
 
 #about .about-item img
@@ -246,16 +302,313 @@ h3
 
 /* ABOUT END */
 
+/* TEAM START */
+#team
+{
+    border-bottom: 2px dashed #898989;
+}
+
+#team .content
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+#team img
+{
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+#team .content h2
+{
+    margin-bottom: 0;
+    grid-column: 1 / 5;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.team-card
+{
+    color: #bfbfbf;
+    box-shadow: 0 0 10px 0 #bfbfbf;
+    border-radius: 5px;
+}
+.team-card h3
+{
+    color: black;
+    margin-bottom: 0;
+}
+.team-card h4
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #898989;
+}
+.team-card p
+{
+    margin-top: 0;
+}
+.team-card:hover
+{
+    box-shadow: 0 0 10px 0 steelblue;
+}
+
+.team-card:hover h3
+{
+    color: steelblue;
+}
+
+
+/* TEAM END */
+
+
+/* STATS START */
+
+#stats .content
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    column-gap: max(5%, 20px);
+}
+.stats-card
+{
+    position: relative;
+    text-align: center;
+    background-color: #4d4d4d;
+}
+
+.stats-card
+{
+    border-radius: 5px;
+}
+
+.stats-card i
+{
+    position: absolute;
+    top: -22px;
+    left: 0;
+    right: 0;
+    width: 32px;
+    margin: 0 auto;
+    color: steelblue;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 32px;
+}
+
+.stats-card h3
+{
+    color: white;
+    margin-bottom: 0;
+    margin-top: 42px;
+}
+
+.stats-card p
+{
+    color: #bfbfbf;
+}
+
+.stats-card:hover
+{
+    background-color: steelblue;
+    border-radius: 5px;
+}
+
+/* STATS END */
+
+/* PRICE START */
+#price h2
+{
+    text-align: center;
+    font-size: 40px;
+}
+
+#price tbody
+{
+    color: #898989;
+}
+#price ul
+{
+    padding-left: 0;
+}
+#price ul li
+{
+    margin-left: 14px; /* marker ma stejnou velikost jako font */
+}
+#price ul li:first-child
+{
+    margin-left: 0;
+    font-weight: bold;
+    list-style: none;
+}
+
+#price table
+{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: left;
+}
+#price button
+{
+    background-color: #f7f7f7;
+    border-color: steelblue;
+    padding: 20px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+#price tr
+{
+    border-bottom: 1px dotted #898989;
+}
+/* PRICE END */
+
+/* REFS START */
+.refs-card h3
+{
+}
+
+.refs-card blockquote
+{
+    position: relative;
+    background-color: #4d4d4d;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px 30px;
+    color: white;
+}
+.refs-card blockquote::before
+{
+    position: absolute;
+    left: 0;
+    top: -18px;
+    content: '"';
+    font-style: italic;
+    color: steelblue;
+    text-align: left;
+    font-size: 80px;
+}
+.refs-card blockquote::after
+{
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    border: 10px solid;
+    border-color: #4d4d4d white white #4d4d4d;
+}
+
+#refs .content
+{
+    display: grid;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr;
+}
+.refs-card
+{
+    max-width: 400px;
+}
+#refs img
+{
+    float: left;
+    width: 60px;
+    border-radius: 50px;
+}
+
+/* REFS END */
+
+/* CONTACT START */
+
+#contact .content
+{
+    display: grid;
+    text-transform: uppercase;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+#contact h2
+{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 40px;
+    grid-column: 1 / 3;
+}
 #map
 {
     height: 400px;
 }
 
+#contact form
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#contact form > *
+{
+    padding: 10px;
+    border-radius: 5px;
+    border-color: steelblue;
+}
+#contact-name
+{
+    grid-column: 1 / 3;
+}
+#contact-email
+{
+    grid-column: 3 / 5;
+}
+#contact-subject
+{
+    grid-column: 1 / 5;
+}
+#contact-message
+{
+    grid-column: 1 / 5;
+}
+#contact-submit
+{
+    background-color: steelblue;
+    color: white;
+    grid-column: 2 / 4;
+    justify-content: center;
+}
+#contact-submit:hover
+{
+    background-color: green;
+}
+/* CONTACT END */
+
+
 /* FOOTER START */
+
+#footer .content
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#footer .content span:last-child
+{
+    text-align: right;
+}
 
 #footer
 {
     color: #bfbfbf;
+    padding-bottom: 40px;
+    padding-top: 40px;
     background-color: black;
 }
 

@@ -159,8 +159,8 @@ h3
     transition: .5s;
     margin-left: 20px;
     background-color: black;
-    color: #bfbfbf;
-    border: 2px solid #bfbfbf;
+    color: #898989;
+    border: 2px solid #898989;
     padding: 20px;
     text-align: center;
     display: inline-block;
@@ -172,6 +172,7 @@ h3
 #get-started a:hover
 {
     color: white;
+    border-color: steelblue ;
     background-color: steelblue;
     font-weight: bold;
 }
@@ -280,8 +281,10 @@ h3
 
 #about .about-item img
 {
+    transition: .5s;
     float: left;
     width: 40%;
+    margin-bottom: 40px;
     margin-right: 80px;
 }
 #about .about-item img:hover
@@ -298,6 +301,11 @@ h3
 .about-item
 {
     margin: 40px 0;
+}
+
+.about-item p
+{
+    text-align: justify;
 }
 
 /* ABOUT END */
@@ -421,10 +429,6 @@ h3
 /* STATS END */
 
 /* PRICE START */
-#price .content
-{
-    font-size: 18px;
-}
 #price h2
 {
     text-align: center;
@@ -481,7 +485,7 @@ h3
 {
     border-bottom: 1px dotted #898989;
 }
-#price tr:hover
+#price tbody tr:hover
 {
     color: steelblue;
     background-color: white;
@@ -500,20 +504,25 @@ h3
     display: flex;
     align-items: center;
     border-radius: 5px;
-    padding: 20px 30px;
+    padding: 20px 40px;
     color: white;
 }
 .refs-card blockquote::before
 {
     position: absolute;
     left: 0;
-    top: -18px;
+    top: -22px;
     content: '"';
     font-style: italic;
     color: steelblue;
     text-align: left;
-    font-size: 80px;
+    font-size: 100px;
 }
+.refs-card:first-child blockquote::before
+{
+    top: -18px;
+}
+
 .refs-card blockquote::after
 {
     content: " ";
@@ -536,11 +545,10 @@ h3
 {
     display: grid;
     max-width: 400px;
-    font-size: 18px;
 }
 .refs-card h3
 {
-    font-size: 18px;
+    margin: 10px 0 0 0;
     position: relative;
     color: #898989;
     font-weight: normal;
@@ -606,12 +614,7 @@ h3
     grid-template-columns: repeat(4, 1fr);
 }
 
-#contact form > *
-{
-    padding: 10px;
-    border-radius: 5px;
-    border-color: steelblue;
-}
+
 #contact-name
 {
     grid-column: 1 / 3;
@@ -631,13 +634,32 @@ h3
 #contact-submit
 {
     background-color: steelblue;
-    color: white;
+    color: white !important;
     grid-column: 2 / 4;
     justify-content: center;
 }
 #contact-submit:hover
 {
     background-color: green;
+}
+
+#contact input, #contact textarea
+{
+    border-color: steelblue;
+    padding: 10px;
+    border-radius: 5px;
+    color: steelblue;
+    font-family: inherit;
+    font-size: inherit;
+}
+#contact input:focus, #contact textarea:focus
+{
+    outline: 1px solid green;
+    border-color: green;
+}
+#contact input:invalid
+{
+    color: red;
 }
 /* CONTACT END */
 
